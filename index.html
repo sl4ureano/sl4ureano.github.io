@@ -1,68 +1,130 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-   <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="Portfólio,Adriano Laureano,Sites,Desenvolvedor,WebSite">
-      <meta name="author" content="Adriano Laureano">
-      <link rel="shortcut icon" href="assets/img/favicon.png">
-      <title>SLAUREANO - Adriano Laureano</title>
-      <!-- Bootstrap core CSS -->
-      <link href="assets/css/bootstrap.css" rel="stylesheet">
-      <!-- Custom styles for this template -->
-      <link href="assets/css/main.css" rel="stylesheet">
-      <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>      
-      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-      <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-      <![endif]-->
-   </head>
-   <body>
-      <!-- Static navbar -->
-      <div class="navbar navbar-inverse navbar-static-top">
-         <div class="container">
-            <div class="navbar-header">
-               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-               </button>
-               <a class="navbar-brand" href="index.html">SLAUREANO</a>
-            </div>            
+
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Portfólio,Adriano Laureano,Sites,Desenvolvedor,WebSite">
+   <meta name="author" content="Adriano Laureano">
+   <link rel="shortcut icon" href="assets/img/favicon.png">
+   <title>SLAUREANO - Adriano Laureano</title>
+   <!-- Bootstrap core CSS -->
+   <link href="assets/css/bootstrap.css" rel="stylesheet">
+   <!-- Custom styles for this template -->
+   <link href="assets/css/main.css" rel="stylesheet">
+   <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+   <style>
+      .navbar-brand {
+         transform: translateX(-50%);
+         left: 50%;
+         position: absolute;
+      }
+
+      body {
+         background: black;
+      }
+
+      h2 {
+         color: #666;
+         font-family: monospace;
+         text-align: center;
+      }
+
+      .background {
+         table-layout: fixed;
+         border-spacing: 0;
+      }
+
+      .background td {
+         padding: 0;
+      }
+
+      .lava,
+      .actor {
+         background: #e55;
+      }
+
+      .wall {
+         background: #444;
+         border: solid 3px #333;
+         box-sizing: content-box;
+      }
+
+      .actor {
+         position: absolute;
+      }
+
+      .coin {
+         background: #e2e838;
+         border-radius: 50%;
+      }
+
+      .player {
+         background: #335699;
+         box-shadow: none;
+      }
+
+      .lost .player {
+         background: #a04040;
+      }
+
+      .won .player {
+         background: green;
+      }
+
+      .game {
+         position: relative;
+         overflow: hidden;
+      }
+   </style>
+</head>
+
+<body>
+   <!-- Static navbar -->
+   <div class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+         <div class="navbar-header">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Adriano Laureano</a>
          </div>
       </div>
-      
-      </div>
-      <!-- /container -->
-      <!-- +++++ Footer Section +++++ -->
-      <div id="footer">
-         <div class="container">
-            <div class="row">
-               <div class="col-lg-4">
-                  <h4>Contatos</h4>
-                  <p>
-                     E-mail: sl4ureano@outlook.com<br/>
-                     +55 021 9868-58723, <br/>
-                     Rio de Janeiro, Brasil.
-                  </p>
-               </div>
-               <!-- /col-lg-4 -->
-               <div class="col-lg-4">
-                  <h4>Me Encontre Também</h4>
-                  <p>
-                     <a href="https://github.com/sl4ureano">Github</a><br/>
-                     <a href="https://www.linkedin.com/in/slaureano/">Linkedin</a><br/>						
-                  </p>
-               </div>
-               <!-- /col-lg-4 -->				
+   </div>
+
+   <!-- /container -->
+   <!-- +++++ Footer Section +++++ -->
+   <div id="footer">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-4">
+               <h4>Contatos</h4>
+               <p>
+                  E-mail: sl4ureano@outlook.com<br />
+                  +55 021 9868-58723, <br />
+                  Rio de Janeiro, Brasil.
+               </p>
             </div>
+            <!-- /col-lg-4 -->
+            <div class="col-lg-4">
+               <h4>Me Encontre Também</h4>
+               <p>
+                  <a href="https://github.com/sl4ureano">Github</a><br />
+                  <a href="https://www.linkedin.com/in/slaureano/">Linkedin</a><br />
+                  <a href="https://enssure.com.br/">Enssure Softwares</a><br />
+               </p>
+            </div>
+            <!-- /col-lg-4 -->
          </div>
-      </div> 
-      <!-- Bootstrap core JavaScript
+      </div>
+   </div>
+   <!-- Bootstrap core JavaScript
          ================================================== -->
-      <!-- Placed at the end of the document so the pages load faster -->
-      <script src="assets/js/bootstrap.min.js"></script>
-   </body>
+   <!-- Placed at the end of the document so the pages load faster -->
+   <script src="assets/js/bootstrap.min.js"></script>
+   <script src="assets/js/script.js"></script>
+</body>
+
 </html>
