@@ -1,24 +1,24 @@
 var LEVELS = [
 	[
+		"                                v    v                 v v                      ",
 		"                                                                                ",
 		"                                                                                ",
 		"                                                                                ",
 		"                                                                                ",
-		"                                                                                ",
-		"                                                                                ",
-		"                                                                  xxx           ",
+		"                                                    o                           ",
+		"                                                                 =xxx           ",
 		"                                                   xx      xx    xx!xx          ",
-		"                                    o o      xx                  x!!!x          ",
-		"                                                                 xx!xx          ",
-		"                                   xxxxx                          xvx           ",
-		"                                                                            xx  ",
+		"                                    o o      xx             v    x!!!x          ",
+		"                                              v                  xx!xx          ",
+		"  =                                xxxxx=                         xvx           ",
+		"                                     v v                                    xx  ",
 		"  xx                                      o o                                x  ",
-		"  x                     o                                                    x  ",
+		"  x                     o                  Λ                                 x  ",
 		"  x                                      xxxxx                             o x  ",
 		"  x          xxxx       o                                                    x  ",
-		"  x  @       x  x                                                xxxxx       x  ",
+		"  x  @       x  x                     o          Λ               xxxxx       x  ",
 		"  xxxxxxxxxxxx  xxxxxxxxxxxxxxx   xxxxxxxxxxxxxxxxxxxx     xxxxxxx   xxxxxxxxx  ",
-		"                              x   x                  x     x                    ",
+		"                              xΛ Λx                  xΛ Λ Λx                    ",
 		"                              x!!!x                  x!!!!!x                    ",
 		"                              x!!!x                  x!!!!!x                    ",
 		"                              xxxxx                  xxxxxxx                    ",
@@ -165,7 +165,8 @@ var actorchars = {
 	o: Coin,
 	"=": Lava,
 	"|": Lava,
-	v: Lava
+	v: Lava,
+	Λ: Lava
 };
 
 function Player(pos) {
@@ -184,8 +185,13 @@ function Lava(pos, ch) {
 		this.speed = new Vector(0, 3);
 		this.repeatPos = pos;
 	}
+	else if (ch === "Λ") {
+		this.speed = new Vector(0, -3);
+		this.repeatPos = pos;
+	}
+	
 }
-Lava.prototype.type = "Lava";
+Lava.prototype.type = "lava";
 
 function Coin(pos) {
 	this.basePos = this.pos = pos;
@@ -219,8 +225,11 @@ function Level(plan) {
 			else if (ch === "=") fieldType = "lava";
 			else if (ch === "v") {
 				fieldType = "lava";
-				console.log(fieldType);
 			}
+			else if (ch === "Λ") {
+				fieldType = "lava";
+			}
+			
 			gridLine.push(fieldType);
 		}
 		this.grid.push(gridLine);
